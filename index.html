@@ -167,6 +167,190 @@
         </div>
       </section>
       <!-- besoffers and coupon part ends------------- -->
+
+      <!-- ticketing system starts here=================== -->
+      <section
+        class="ticekting-sytem bg-[#F7F8F8] pt-16 rounded-2xl border-t-2 border-[#1DD100] mt-12 px-20"
+      >
+        <h1 class="text-4xl font-bold text-center mb-3">Nature Paribahan</h1>
+        <p class="text-[#03071260] mb-4 text-center">
+          Yes, you can run unit tests and view the results directly within the
+          app. The integrated testing features allow for a streamlined .
+        </p>
+
+        <!-- ticket ----------- demo section -->
+        <div class="display-ticket bg-white flex">
+          <div class="ticket-display flex-1 space-y-4">
+            <!-- seats -->
+            <div class="seatcount flex gap-4 justify-between px-5 py-8">
+              <div class="flex gap-4">
+                <img src="images/bus-logo.png" alt="" />
+                <div>
+                  <h1 class="font-bold text-xl">Nature Paribahan</h1>
+                  <p class="text-[#03071260]">Coach-009-WEB ! AC_Business</p>
+                </div>
+              </div>
+              <!-- show seats remaining -->
+              <div
+                class="remaining-seats px-4 py-2 bg-[#1DD10010] flex gap-2 rounded-xl items-center"
+              >
+                <div>
+                  <img class="w-full" src="images/seat-green.png" alt="" />
+                </div>
+                <h5 class="font-semibold text-[#1DD100]">
+                  <span>40</span> Seats left
+                </h5>
+              </div>
+            </div>
+            <!-- deatils of the ticket where its going -->
+            <div class="px-6">
+              <div class="tcikent-info py-4 bg-[#F7F8F8] rounded-lg">
+                <div class="flex justify-between border-b-2 border-dotted p-3">
+                  <p>Route</p>
+                  <p>Dhaka-Sylhet</p>
+                </div>
+                <div
+                  class="flex justify-between bg-[#F7F8F8] border-b-2 border-dotted p-3"
+                >
+                  <p>Departure Time</p>
+                  <p>9:00PM</p>
+                </div>
+                <div class="flex justify-between bg-[#F7F8F8] p-3">
+                  <p class="rounded-md p-2 bg-[#03071210]">
+                    Boarding Point-Laximpur
+                  </p>
+                  <p class="rounded-md p-2 bg-[#03071210]">
+                    Boarding Point-Laximpur
+                  </p>
+                  <p class="rounded-md p-2 bg-[#03071210]">
+                    Boarding Point-Laximpur
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- right siede -->
+          <img src="images/info-devider.png" alt="" />
+          <div
+            class="ticketprice px-32 flex flex-col items-center justify-center"
+          >
+            <img src="images/fare.png" alt="" /><br />
+            <h2 class="font-bold text-xl"><span>500</span>Taka</h2>
+            <p class="text-lg text-[#03071260]">Per Seat</p>
+          </div>
+        </div>
+        <!-- ticket ----------- demo sectionends -->
+
+        <!-- pick seat section starts  -->
+        <section
+          class="seat-selection mt-6 bg-white rounded-xl p-6 flex justify-between"
+        >
+          <div class="selected-seats w-7/12">
+            <h1 class="text-xl font-semibold">Selec Your Seat</h1>
+            <br />
+            <hr class="border-b-2 bg-white border-dotted" />
+            <br />
+            <div class="flex justify-between border-b-2 border-dotted p-3">
+              <p class="flex">
+                <img src="images/seat-gray.png" alt="" />Available
+              </p>
+              <p class="text-[#1DD100] flex">
+                <img src="images/seat-green-filled.png" alt="" />Selected
+              </p>
+            </div>
+
+            <div class="allseats">
+              <br />
+              <div class="weel flex justify-end w-full">
+                <button class="btn w-24" disabled>
+                  <img src="images/tabler-icon-steering-wheel.svg" alt="" />
+                </button>
+              </div>
+              <br />
+              <div class="rowA flex justify-between items-center">
+                <p>A</p>
+                <button class="btn w-24 bookseat">A1</button>
+                <button class="btn w-24 bookseat">A2</button>
+                <button class="btn w-24 bookseat">A3</button>
+                <button class="btn w-24 bookseat">A4</button>
+              </div>
+              <div class="rowA flex justify-between items-center mt-4">
+                <p>B</p>
+                <button class="btn w-24 bookseat">B1</button>
+                <button class="btn w-24 bookseat">B2</button>
+                <button class="btn w-24 bookseat">B3</button>
+                <button class="btn w-24 bookseat">B4</button>
+              </div>
+            </div>
+          </div>
+          <!-- right side form starts -->
+          <div class="formside w-2/5 border-l border-dotted px-3">
+            <h1 class="text-xl font-semibold">Selec Your Seat</h1>
+            <br />
+            <hr class="border-b-2 bg-white border-dotted" />
+            <br />
+            <!-- calculate function------------------------------------- -->
+            <div class="calculate p-4 bg-[#F7F8F8]">
+              <div class="flex justify-between font-bold">
+                <p>Seats</p>
+                <p>Class</p>
+                <p>Price</p>
+              </div>
+
+              <hr />
+              <div class="dynamic-price"></div>
+              <br />
+              <br /><br />
+              <hr />
+              <div class="toalPrice flex justify-between font-bold">
+                <p>Total</p>
+                <p>BTD <span id="totalPrice">0</span></p>
+              </div>
+              <br />
+              <div
+                class="inputfield items-center flex justify-center rounded-md"
+              >
+                <input
+                  type="text"
+                  class="p-3 w-full"
+                  placeholder="Have you any coupon"
+                /><button disabled class="btn text-white bg-[#1DD100]">
+                  Apply
+                </button>
+              </div>
+              <br />
+              <div class="toalPrice flex justify-between font-bold">
+                <p>Total</p>
+                <p>BTD <span id="grandPrice">0</span></p>
+              </div>
+            </div>
+
+            <div class="form w-full mt-4">
+              <p class="font-bold">Passenger Name</p>
+              <input
+                class="w-full p-4 border rounded-md"
+                type="text"
+                placeholder="Enter Your Name"
+              /><br />
+              <p class="font-bold">Phone Number</p>
+              <input
+                class="w-full p-4 border rounded-md"
+                type="text"
+                placeholder="Enter Your Name"
+              /><br />
+              <p class="font-bold">Email ID</p>
+              <input
+                class="w-full p-4 border rounded"
+                type="text"
+                placeholder="Enter Your Name"
+              /><br />
+            </div>
+          </div>
+          <!-- right side form ends -->
+        </section>
+        <!-- pick seat section starts ends here -->
+      </section>
+      <!-- ticketing system starts here===================ends -->
     </main>
 
     <!-- navbar========================= ends -->
