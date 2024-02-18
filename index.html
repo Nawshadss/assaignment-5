@@ -198,7 +198,7 @@
                   <img class="w-full" src="images/seat-green.png" alt="" />
                 </div>
                 <h5 class="font-semibold text-[#1DD100]">
-                  <span>40</span> Seats left
+                  <span id="seat-available">40</span> Seats left
                 </h5>
               </div>
             </div>
@@ -235,7 +235,9 @@
             class="ticketprice px-32 flex flex-col items-center justify-center"
           >
             <img src="images/fare.png" alt="" /><br />
-            <h2 class="font-bold text-xl"><span>500</span>Taka</h2>
+            <h2 class="font-bold text-xl">
+              <span id="TicketPrice">550</span>Taka
+            </h2>
             <p class="text-lg text-[#03071260]">Per Seat</p>
           </div>
         </div>
@@ -267,6 +269,7 @@
                 </button>
               </div>
               <br />
+              <!-- seat butotn part -->
               <div class="rowA flex justify-between items-center">
                 <p>A</p>
                 <button class="btn w-24 bookseat">A1</button>
@@ -298,7 +301,7 @@
               </div>
 
               <hr />
-              <div class="dynamic-price"></div>
+              <div id="dynamic-price"></div>
               <br />
               <br /><br />
               <hr />
@@ -354,6 +357,7 @@
     </main>
 
     <!-- navbar========================= ends -->
-    <script src="index.js"></script>
+    <script src="utilities.js"></script>
+    <script src="indexx.js"></script>
   </body>
 </html>
