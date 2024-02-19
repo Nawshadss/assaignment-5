@@ -3,10 +3,13 @@ function getElementId(id) {
 }
 
 function hideCoupn() {
+  const discount = getElementId("show-discount");
   const coupon = getElementId("coupndone");
   const input = getElementId("input-div");
   coupon.classList.remove("hidden");
+  discount.classList.remove("hidden");
   input.classList.add("hidden");
+  console.log(discount);
 }
 
 function getelementClass(clas) {

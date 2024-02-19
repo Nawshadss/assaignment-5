@@ -16,15 +16,19 @@ function setDefaultSeat() {
 function apply() {
   const coupn = getElementId("coupon").value;
   console.log(coupn);
+  const discount = getElementId("discount");
+
   const totalPrice = parseInt(getElementId("totalPrice").innerText);
   let grandTotal = getElementId("grandPrice");
   if (coupn === "NEW15") {
     let valu = totalPrice - (totalPrice * 15) / 100;
     setElement(grandTotal, valu);
+    discount.innerText = (totalPrice * 15) / 100;
     hideCoupn();
   } else if (coupn === "Couple 20") {
     let valu = totalPrice - (totalPrice * 20) / 100;
     setElement(grandTotal, valu);
+    discount.innerText = (totalPrice * 20) / 100;
     hideCoupn();
   } else {
     alert("wronge coupn");

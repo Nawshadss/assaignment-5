@@ -87,11 +87,14 @@
                 the app. The integrated testing features allow for a streamlined
                 .
               </p>
-              <button
-                class="btn bg-[#1DD100] text-black font-bold text-lg border-none"
-              >
-                <a class="" href="#buyTicket">Buy Tickets</a>
-              </button>
+
+              <a href="#buyTicket">
+                <button
+                  class="btn bg-[#1DD100] text-black font-bold text-lg border-none"
+                >
+                  Buy Tickets
+                </button>
+              </a>
             </div>
           </div>
         </div>
@@ -170,7 +173,7 @@
 
       <!-- ticketing system starts here=================== -->
       <section
-        class="ticekting-sytem bg-[#F7F8F8] pt-16 rounded-2xl border-t-2 border-[#1DD100] mt-12 px-20"
+        class="ticekting-sytem bg-[#F7F8F8] pt-16 rounded-[5rem] border-t-2 border-[#1DD100] mt-12 px-20"
       >
         <h1 class="text-4xl font-bold text-center mb-3">Nature Paribahan</h1>
         <p class="text-[#03071260] mb-4 text-center">
@@ -321,6 +324,13 @@
                 <p>Coupn Successfully Applied</p>
               </div>
               <div
+                id="show-discount"
+                class="flex justify-center gap-2 bg-red-50 px-4 rounded-md my-2 hidden"
+              >
+                <p class="font-bold my-2">Your dicount was BTD</p>
+                <p id="discount" class="font-bold my-2">250</p>
+              </div>
+              <div
                 id="input-div"
                 class="inputfield items-center flex justify-center rounded-md"
               >
@@ -368,14 +378,6 @@
                 placeholder="Enter Your Name"
               /><br />
 
-              <!-- <button
-                disabled
-                id="nextbutton"
-                class="btn w-full text-center p-4 bg-[#1DD100] mt-4 rounded-lg" onclick="showModal()"
-              >
-                Next
-              </button> -->
-              <!-- Open the modal using ID.showModal() method -->
               <button
                 disabled
                 id="nextbutton"
@@ -398,7 +400,10 @@
                   <div class="modal-action">
                     <form method="dialog">
                       <!-- if there is a button in form, it will close the modal -->
-                      <button class="btn bg-[#27AE60] text-white">
+                      <button
+                        class="btn bg-[#27AE60] text-white"
+                        onclick="location.reload() "
+                      >
                         Continue
                       </button>
                     </form>
