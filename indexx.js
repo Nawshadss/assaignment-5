@@ -21,10 +21,20 @@ function apply() {
   if (coupn === "NEW15") {
     let valu = totalPrice - (totalPrice * 15) / 100;
     setElement(grandTotal, valu);
+    hideCoupn();
   } else if (coupn === "Couple 20") {
     let valu = totalPrice - (totalPrice * 20) / 100;
     setElement(grandTotal, valu);
+    hideCoupn();
   } else {
     alert("wronge coupn");
+  }
+}
+
+function showNext(e) {
+  const valu = parseInt(e.target.value);
+  if (typeof valu === "number" && count > 0) {
+    const nextbutton = getElementId("nextbutton");
+    nextbutton.removeAttribute("disabled");
   }
 }

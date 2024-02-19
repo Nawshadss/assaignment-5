@@ -2,6 +2,13 @@ function getElementId(id) {
   return document.getElementById(id);
 }
 
+function hideCoupn() {
+  const coupon = getElementId("coupndone");
+  const input = getElementId("input-div");
+  coupon.classList.remove("hidden");
+  input.classList.add("hidden");
+}
+
 function getelementClass(clas) {
   return document.querySelectorAll(clas);
 }
@@ -18,9 +25,14 @@ function enableApply() {
   const applyButton = getElementId("apply");
   applyButton.removeAttribute("disabled");
 }
-// function setAttibe(e) {
-//   let elemnt = e.target;
-// }
+
+function minusSeat() {
+  let seatAvailable = getElementId("seat-available");
+  let seatAvailableNumber = parseInt(seatAvailable.innerText);
+
+  seatAvailable.innerText = seatAvailableNumber - 1;
+}
+
 function appenElement(ticketPrice, e) {
   let element = getElementId("dynamic-price");
   let div = document.createElement("div");
@@ -41,7 +53,10 @@ function appen(e) {
     enableApply();
   }
   setBgcolor(e);
+  minusSeat();
 }
+
+// form part
 
 function setTotal() {
   let dynamicPrice = getelementClass(".dynamicPrice");
