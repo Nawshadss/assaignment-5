@@ -12,3 +12,19 @@ function setDefaultSeat() {
   const totalSeat = getelementClass(".bookseat").length;
   setElement(seatAvailable, totalSeat);
 }
+
+function apply() {
+  const coupn = getElementId("coupon").value;
+  console.log(coupn);
+  const totalPrice = parseInt(getElementId("totalPrice").innerText);
+  let grandTotal = getElementId("grandPrice");
+  if (coupn === "NEW15") {
+    let valu = totalPrice - (totalPrice * 15) / 100;
+    setElement(grandTotal, valu);
+  } else if (coupn === "Couple 20") {
+    let valu = totalPrice - (totalPrice * 20) / 100;
+    setElement(grandTotal, valu);
+  } else {
+    alert("wronge coupn");
+  }
+}

@@ -90,7 +90,7 @@
               <button
                 class="btn bg-[#1DD100] text-black font-bold text-lg border-none"
               >
-                Buy Tickets
+                <a class="" href="#buyTicket">Buy Tickets</a>
               </button>
             </div>
           </div>
@@ -182,7 +182,10 @@
         <div class="display-ticket bg-white flex">
           <div class="ticket-display flex-1 space-y-4">
             <!-- seats -->
-            <div class="seatcount flex gap-4 justify-between px-5 py-8">
+            <div
+              class="seatcount flex gap-4 justify-between px-5 py-8"
+              id="buyTicket"
+            >
               <div class="flex gap-4">
                 <img src="images/bus-logo.png" alt="" />
                 <div>
@@ -303,7 +306,7 @@
               <hr />
               <div id="dynamic-price"></div>
               <br />
-              <br /><br />
+
               <hr />
               <div class="toalPrice flex justify-between font-bold">
                 <p>Total</p>
@@ -316,14 +319,20 @@
                 <input
                   type="text"
                   class="p-3 w-full"
+                  id="coupon"
                   placeholder="Have you any coupon"
-                /><button disabled class="btn text-white bg-[#1DD100]">
+                /><button
+                  disabled
+                  id="apply"
+                  onclick="apply()"
+                  class="btn text-white bg-[#1DD100]"
+                >
                   Apply
                 </button>
               </div>
               <br />
               <div class="toalPrice flex justify-between font-bold">
-                <p>Total</p>
+                <p>Grand Total</p>
                 <p>BTD <span id="grandPrice">0</span></p>
               </div>
             </div>

@@ -1,0 +1,8 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.clicked {
+  background-color: #1dd100;
+  color: white;
+}
